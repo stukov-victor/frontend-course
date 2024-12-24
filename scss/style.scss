@@ -1,0 +1,110 @@
+@import 'modules/fonts';
+
+@import url(../fonts/fontawesome/css/all.min.css);
+
+
+$fontFamilyBase: 'Montserrat', sans-serif;
+$fontFamilyLogo: 'Comfortaa', sans-serif;
+$white: #FDF6F6;
+$black: #2e2b2b;
+$light: #F2B138;
+$main: #388186;
+$h1: 64px;
+$h2: 38px;
+
+@import 'modules/reset';
+
+@import 'modules/buttons';
+
+body {
+    font-family: $fontFamilyBase;
+}
+
+h1 {
+    font-size: $h1;
+    line-height: 78px;
+    letter-spacing: 0.015em;
+
+    @media screen and (max-width: 767px) {
+        font-size: $h1;
+        line-height: 1.5;
+    }
+}
+
+h2 {
+    font-size: $h2;
+    line-height: 46px;
+    letter-spacing: 0.015em;
+}
+
+.logo {
+    font-family: $fontFamilyLogo;
+    font-weight: 700;
+    max-width: 74px;
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.015em;
+    display: inline-block;
+}
+
+.rating-star {
+    color: #FF9F43;
+}
+
+@keyframes line-width {
+    0% {
+        width: 0px;
+    }
+
+    100% {
+        width: 94px;
+    }
+}
+
+
+main {
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrap {
+    width: 1080px;
+    position: relative;
+
+    @media screen and (max-width: 1120px) {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        box-sizing: border-box;
+    }
+}
+
+.cards {
+    margin-top: 25px;
+    display: flex;
+    justify-content: start;
+    gap: 4%;
+    flex-wrap: wrap;
+
+    @media screen and (max-width: 1120px) {
+        gap: 2%;
+    }
+
+    .card {
+        margin-bottom: 65px;
+    }
+}
+
+@import 'modules/_header';
+
+@import 'modules/footer';
+
+@import 'modules/card';
+
+@import 'modules/breadcrumbs';
+
+@import 'modules/homepage';
+
+@import 'modules/catalog-page';
+
+@import 'modules/product-page';

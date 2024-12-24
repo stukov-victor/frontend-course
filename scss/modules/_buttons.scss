@@ -1,0 +1,76 @@
+@mixin btn($color, $bgColor) {
+    background-color: $bgColor;
+    color: $color;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 18px;
+    font-weight: 500;
+    letter-spacing: 0.015em;
+    padding: 10px 22px;
+    border-radius: 24px;
+    display: inline-block;
+}
+
+.light-button {
+    @include btn($white, $light);
+}
+
+.light-button-with-arrow {
+    @include btn($white, $light);
+
+    padding-right: 44px;
+    background-image: url(../img/button-arrow-right-white.png);
+    background-position: 80% center;
+    background-repeat: no-repeat;
+    transition: background-position 0.3s ease-in-out;
+
+    &:hover {
+        background-position: 85% center;
+    }
+}
+
+.transparent-button {
+    @include btn($white, transparent);
+
+    border: 1px solid;
+}
+
+.transparent-eye-button {
+    @include btn(rgb(24, 160, 251), transparent);
+
+   
+    background-image: url(../img/btn-eye.png);
+    background-repeat: no-repeat;
+    background-position: 20px center;
+    border: 1px solid;
+    padding-left: 48px;
+}
+
+.main-color-button {
+    @include btn($white, $main);
+
+    border: none;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.4;
+    font-family: inherit;
+}
+
+.main-color-transparent-button {
+    @include btn($main, transparent);
+
+    border: 1px solid;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.4;
+    font-family: inherit;
+}
+
+.blue-button {
+    @include btn($white, rgb(24, 160, 251));
+
+    font-size: 13px;
+    line-height: 16px;
+    border: none;
+    font-family: $fontFamilyBase;
+}

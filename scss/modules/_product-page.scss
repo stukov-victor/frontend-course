@@ -1,0 +1,365 @@
+#product {
+
+    h1,
+    .h1 {
+        font-size: 24px;
+        line-height: 21px;
+        letter-spacing: 0;
+        font-weight: 600;
+        color: rgb(94, 88, 115);
+    }
+
+    h3 {
+        color: rgb(94, 88, 115);
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 600;
+        letter-spacing: 0;
+        padding-bottom: 8px;
+    }
+
+    .h4 {
+        color: rgb(94, 88, 115);
+        font-size: 15px;
+        line-height: 18px;
+        font-weight: 600;
+        letter-spacing: 0;
+    }
+
+    p {
+        font-size: 14px;
+        line-height: 17px;
+        letter-spacing: 0.015em;
+    }
+
+    .badge-purple {
+        padding: 2px 9px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 600;
+        border-radius: 17px;
+        background-color: rgba(115, 103, 240, 0.12);
+        color: rgb(115, 103, 240);
+    }
+
+    .badge-orange {
+        padding: 2px 9px;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 600;
+        border-radius: 17px;
+        background-color: rgba(255, 159, 67, 0.12);
+        color: rgb(255, 159, 67);
+    }
+
+    .circle-black {
+        border-radius: 50%;
+        display: inline-block;
+        width: 17px;
+        height: 17px;
+        background-color: rgb(17, 18, 20);
+    }
+
+    .circle-main-color {
+        border-radius: 50%;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background-color: $main;
+    }
+
+    .breadcrumbs {
+        margin-top: 65px;
+        margin-bottom: 46px;
+    }
+
+    .product-wrapper {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .wrap {
+            border: 1px solid rgb(191, 191, 191);
+            border-radius: 6px;
+            padding: 37px 42px 65px;
+            margin-bottom: 40px;
+            box-sizing: border-box;
+
+            @media screen and (max-width: 776px) {
+                padding: 20px;
+            }
+
+
+            .product-top {
+                display: grid;
+                grid-template-columns: 342px auto;
+                grid-template-rows: 50px auto;
+                column-gap: 40px;
+
+                @media screen and (max-width: 776px) {
+                    display: flex;
+                    flex-direction: column;
+                }
+
+                .product-images {
+                    grid-column-start: 1;
+                    grid-column-end: 2;
+                    grid-row-start: 1;
+                    grid-row-end: 3;
+
+                    order: 2;
+                    text-align: center;
+
+                    @media screen and (max-width: 776px) {
+                        margin-top: 20px;
+                    }
+
+                    .product-thumbnails {
+                        display: flex;
+                        justify-content: space-between;
+                        margin-top: 20px;
+
+                        @media screen and (max-width: 776px) {
+                            justify-content: space-evenly;
+                        }
+
+                        img {
+                            width: 90px;
+                            height: 89px;
+                        }
+                    }
+
+
+                    >img {
+                        max-width: 100%;
+                    }
+
+                    .transparent-eye-button {
+                        margin-top: 75px;
+                    }
+                }
+
+                .product-caption {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 1;
+                    grid-row-end: 2;
+
+                    order: 1;
+
+                    .product-rating-and-reviews {
+                        margin-top: 13px;
+                        font-size: 18px;
+                        line-height: 21px;
+                    }
+                }
+
+                .product-info {
+                    grid-column-start: 2;
+                    grid-column-end: 3;
+                    grid-row-start: 2;
+                    grid-row-end: 3;
+
+                    order: 3;
+
+                    .product-price {
+                        margin-top: 31px;
+                        font-size: 24px;
+                        line-height: 21px;
+                        font-weight: 700;
+                        letter-spacing: 0;
+                        color: rgb(94, 88, 115);
+                    }
+
+                    .shipping {
+                        margin-top: 17px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        font-size: 18px;
+                        line-height: 21px;
+
+                        @media screen and (max-width: 991px) {
+                            flex-direction: column;
+                            align-items: start;
+                        }
+
+                        >div {
+                            padding-left: 34px;
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+
+                            &:before {
+                                content: '';
+                                position: absolute;
+                                width: 24px;
+                                height: 24px;
+                                left: 0;
+                            }
+
+                            &:nth-child(1) {
+                                &::before {
+                                    background-image: url(../img/shipping/clock.png);
+                                }
+
+                            }
+
+                            &:nth-child(2) {
+                                &::before {
+                                    background-image: url(../img/shipping/house.png);
+                                }
+                            }
+
+                            &:nth-child(3) {
+                                &::before {
+                                    background-image: url(../img/shipping/truck.png);
+                                }
+                            }
+                        }
+                    }
+
+                    .product-description {
+                        margin-top: 20px;
+                    }
+
+                    .product-conditions {
+                        margin-top: 20px;
+                    }
+
+                    .product-properties {
+                        table {
+                            width: 260px;
+                            font-size: 14px;
+                            line-height: 17px;
+                            margin-top: 17px;
+
+                            td {
+                                padding: 4px 0;
+                            }
+                        }
+                    }
+
+                    .product-form {
+                        margin-top: 50px;
+
+                        form {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: space-between;
+                            gap: 20px;
+
+                            .product-form-control {
+                                width: calc(50% - 20px);
+
+                                input[type="date"] {
+                                    width: 100%;
+                                    display: inline-block;
+                                    outline: 0;
+                                    font-size: 12px;
+                                    background-color: transparent;
+                                    font-family: inherit;
+                                    margin: 0;
+                                    padding: 8px 15px;
+                                    width: 100%;
+                                    height: 38px;
+                                    border-radius: 5px;
+                                    box-sizing: border-box;
+                                    border: 1px solid rgba(191, 191, 191, 0.5);
+                                    margin-top: 3px;
+                                }
+
+                                label {
+                                    display: block;
+                                }
+
+
+                            }
+
+                            button {
+                                margin-right: 20px;
+
+                                @media screen and (max-width: 776px) {
+                                    margin-right: 0;
+                                }
+                    
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            .product-owner {
+                .product-owner-name {
+                    font-size: 19px;
+                    line-height: 1;
+                    margin-bottom: 8px;
+                    font-weight: 600;
+                    color: rgb(94, 88, 115);
+
+                    span {
+                        display: inline-block;
+                        margin-left: 10px;
+                    }
+
+                }
+
+                img {
+                    float: left;
+                    margin-right: 40px;
+                }
+
+                .circle-main-color {
+                    margin-right: 4px;
+                }
+
+                .main-color-transparent-button {
+                    margin-top: 8px;
+                }
+
+            }
+
+            .product-reviews {
+                .review {
+                    clear: both;
+                    border-bottom: 1px solid rgb(185, 185, 195);
+                    padding: 45px 0;
+
+                    .review-author {
+                        font-size: 19px;
+                        line-height: 1;
+                        margin-bottom: 8px;
+                        font-weight: 600;
+                        color: rgb(94, 88, 115);
+                    }
+
+                    .review-date {
+                        margin-bottom: 3px;
+                    }
+
+                    .review-rating {
+                        margin-bottom: 3px;
+                    }
+
+                    img {
+                        float: left;
+                        margin-right: 40px;
+                    }
+
+                    p {
+                        overflow: hidden;
+                        font-weight: 400;
+                        font-size: 14px;
+                        line-height: 23px;
+                    }
+
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+            }
+        }
+
+    }
+}

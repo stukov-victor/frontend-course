@@ -1,0 +1,36 @@
+footer {
+    background-color: $black;
+    color: $white;
+    padding: 120px 0;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+
+    a {
+        color: $white;
+        text-decoration: none;
+    }
+
+    .footer-top {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        padding-bottom: 32px;
+    }
+
+    .footer-bottom {
+        padding-top: 107px;
+
+        .social {
+            max-width: 216px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 32px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 15px;
+        }
+    }
+}

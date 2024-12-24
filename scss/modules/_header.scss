@@ -1,0 +1,119 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 11px 0;
+
+    a {
+        text-decoration: none;
+        color: $black;
+    }
+
+    .wrap {
+        display: flex;
+        justify-content: space-between;
+
+        .logo {
+            color: $main;
+        }
+
+        .menu {
+            position: relative;
+
+            @media screen and (max-width: 991px) {
+                position: absolute;
+                left: 140px;
+            }
+
+            .burger {
+                position: absolute;
+                top: 10px;
+                left: -25px;
+                cursor: pointer;
+                display: none;
+
+                @media screen and (max-width: 991px) {
+                    display: inline-block;
+                    
+                }
+            }
+
+            ul {
+                display: flex;
+                list-style-type: none;
+                margin-right: 165px;
+                height: 100%;
+                align-items: center;
+
+                @media screen and (max-width: 1120px) {
+                    margin-right: 0;
+                }
+
+                @media screen and (max-width: 991px) {
+                    // display: none;
+                    position: absolute;
+                    left: 0;
+                    flex-direction: column;
+                    border: 1px solid rgb(191, 191, 191);
+                    border-radius: 5px;
+                    height: auto;
+                    align-items: start;
+                    top: 33px;
+                    background: #fff;
+                    z-index: 100;
+                    width: 200px;
+                    padding: 15px;
+
+                    display: none;
+                }
+
+                li {
+                    margin-right: 55px;
+
+                    @media screen and (max-width: 991px) {
+                        margin-right: 0;
+                        margin-bottom: 7px;
+                    }
+
+                    a {
+                        font-weight: 500;
+                        font-size: 18px;
+                        line-height: 20px;
+                        letter-spacing: 0.015em;
+                    }
+
+                    &.active {
+                        a {
+                            font-weight: 700;
+                        }
+                    }
+                }
+            }
+        }
+
+        .auth {
+            display: flex;
+            align-items: center;
+
+            .search {
+                width: 24px;
+                height: 24px;
+                // background: url(../img/search.png) no-repeat;
+                color: #6E6B7B;
+                font-size: 19px;
+                display: inline-block;
+            }
+
+            .separator {
+                margin-left: 26px;
+                margin-right: 26px;
+                height: 100%;
+                width: 1px;
+                background-color: rgba(0, 0, 0, 0.1);
+                display: inline-block;
+            }
+
+        }
+
+
+    }
+}
